@@ -17,6 +17,6 @@ public class Ejercicio10 {
         for (int i = 2; i <= num; i++) {
             acum *= i;
         }
-        System.out.println("El factoria de " + num + " es " + acum);
+        System.out.println("El factorial de " + num + " es " + acum);
     }
 }
