@@ -19,7 +19,7 @@ public class Ejercicio7 {
         System.out.println("Introduce su edad");
         int edad = Integer.parseInt(sc.nextLine());
 
-        if (estado == 's' && edad < 35 || estado == 'd' && edad < PRIMERA_FRANJA_EDAD){
+        if (estado == 's' && edad < PRIMERA_FRANJA_EDAD || estado == 'd' && edad < PRIMERA_FRANJA_EDAD){
             System.out.println("Su porcentaje de retención es de " + RETENCION_SOLTERO_DIVORCIADO + " %");
         } else if (edad > SEGUNDA_FRANJA_EDAD) {
             System.out.println("Su porcentaje de retención es de " + RETENCION_MAYORES_50 + " %");
