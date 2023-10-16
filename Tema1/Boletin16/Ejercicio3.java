@@ -13,5 +13,6 @@ public class Ejercicio3 {
         }while (num < 0);
 
         System.out.println("El número " + num + " tiene " + Integer.toString(num).length() + " dígitos");
+
     }
 }
