@@ -15,7 +15,7 @@ public class Ejercicio2 {
 
             System.out.println("Introduce el exponente de la potencia");
             exponente = Integer.parseInt(sc.nextLine());
-        }while(base < 0  && exponente < 0);
+        }while(base < 0  || exponente < 0);
 
         //Math.pow para calcular una potencia
         double resultado = Math.pow(base, exponente);
