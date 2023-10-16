@@ -12,7 +12,6 @@ public class Ejercicio4 {
             num = Integer.parseInt(sc.nextLine());
         } while (num > 100);
 
-        boolean fallo = false;
         int numSecreto = (int) (Math.random() * 100 + 1);
         int vidas = 4;
 
