@@ -24,5 +24,4 @@ public class Ejercicio5 {
             System.out.println("El número " + num + " ES primo");
         }
     }
-
 }
