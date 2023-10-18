@@ -17,7 +17,7 @@ public class Ejercicio7 {
         }while(num < 0 || num2 < 0);
 
 
-        System.out.println("EL MCD de " + num +" y " + num2 + " es " + euclides(num, num2));
+        System.out.println("El MCD de " + num +" y " + num2 + " es " + euclides(num, num2));
     }
 
     public static int euclides(int num, int num2){
