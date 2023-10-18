@@ -7,12 +7,20 @@ public class Ejercicio3 {
         Scanner sc = new Scanner(System.in);
 
         int num;
-        do {
             System.out.println("Introduce un número entero");
             num = Integer.parseInt(sc.nextLine());
-        }while (num < 0);
 
-        System.out.println("El número " + num + " tiene " + Integer.toString(num).length() + " dígitos");
+        /*
+        Transforma un entero en String y cuenta los caractéres que tiene con el .length
+         */
+        //System.out.println("El número " + num + " tiene " + Integer.toString(num).length() + " dígitos");
 
+        int numB = Math.abs(num);
+        int i;
+
+        for (i = 1; numB >= 10; i++) {
+            numB /= 10;
+        }
+        System.out.println("El número " + num + " tiene " + i + " cifras");
     }
 }
