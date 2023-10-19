@@ -18,10 +18,10 @@ public class MiEntradaSalida {
      * @param positivo valor positivo
      * @return devuelve un valor positivo
      */
-    public static int LeerEnteroPositivo(String mensaje, int positivo){
-        if (positivo < 0){
+    public static int LeerEnteroPositivo(String mensaje){
+        //if (positivo < 0){
             //TODO Controlar excepcion
-        }
+       // }
 
         System.out.printf(mensaje + ": ");
 
