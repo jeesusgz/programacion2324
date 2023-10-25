@@ -6,6 +6,7 @@ public class Ejercicio2 {
         int numNegativos = 0;
 
         for (int i = 0; i < miArray.length; i++) {
+            //miArray[i] coger el contenido del array
             if (miArray[i] < 0){
                 numNegativos++;
             }

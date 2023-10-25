@@ -8,6 +8,7 @@ public class Ejercicio1 {
 
         //recorrer la array entera
         for (int i = 0; i < miArray.length; i++) {
+            //i para coger la posición del array
             if (i % 2 == 0){
                 suma += miArray[i];
             }
