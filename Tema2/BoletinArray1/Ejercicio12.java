@@ -2,7 +2,7 @@ package Tema2.BoletinArray1;
 
 import java.util.Arrays;
 
-public class OrdenamientoBurbuja {
+public class Ejercicio12 {
     private static final int MAX_RANDOM = 10;
     public static void main(String[] args) {
         int[] array = generaArrayAleatorio(MAX_RANDOM);
@@ -31,5 +31,9 @@ public class OrdenamientoBurbuja {
         }
 
         return miArray;
+    }
+
+    public static int[] reverse (int a){
+        
     }
 }
