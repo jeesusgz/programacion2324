@@ -32,8 +32,4 @@ public class Ejercicio12 {
 
         return miArray;
     }
-
-    public static int[] reverse (int a){
-        
-    }
 }
