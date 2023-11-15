@@ -55,10 +55,10 @@ public class MiEntradaSalida {
         do {
             numeroLeido = Integer.parseInt(sc.nextLine());
 
-            if (numeroLeido> min || numeroLeido < max){
+            if (numeroLeido < min || numeroLeido > max){
                 System.out.printf("Porfavor introduce un valor entre %d y %d", min, max);
             }
-        } while (numeroLeido > min || numeroLeido < max);
+        } while (numeroLeido < min || numeroLeido > max);
 
         return numeroLeido;
     }
