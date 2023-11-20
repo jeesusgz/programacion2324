@@ -49,6 +49,7 @@ public class Ejercicio14 {
             int numDesencolado = cola[inicio];
             inicio = (inicio + 1) % TAM_COLA;
             numElementos--;
+            primerElemento++;
             return numDesencolado;
         }else {
             System.out.println("No hay elementos en la cola");
@@ -59,13 +60,16 @@ public class Ejercicio14 {
     public static void mostrarCola(){
 
         System.out.print("Cola --> [");
+        int almacen = inicio;
         for (int i = 0; i < numElementos; i++) {
             System.out.print(cola[inicio]);
-            inicio = (inicio + 1) % TAM_COLA;
+            //inicio = (inicio + 1) % TAM_COLA;
+            inicio++;
             if (i < numElementos - 1){
-                System.out.println(", ");
+                System.out.print(", ");
             }
         }
+        inicio = almacen;
         System.out.println("]");
     }
 
