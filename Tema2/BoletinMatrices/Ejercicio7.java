@@ -20,8 +20,8 @@ public class Ejercicio7 {
     public static boolean comprobarMatrizIgual(int[][] m, int[][] m2){
         boolean esIgual= true;
 
-        for (int i = 0; i < m.length && i < m2.length; i++) {
-            for (int j = 0; j < m[i].length && j < m2[i].length; j++) {
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m[i].length; j++) {
                 if (m[i][j] != m2[i][j]){
                     esIgual = false;
                 }
