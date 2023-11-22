@@ -3,8 +3,7 @@ package Tema2.BoletinMatrices;
 public class Ejercicio6 {
     public static void main(String[] args) {
         int[][] m = {{1,3,5},
-                    {0,2,7}
-        };
+                    {0,2,7}};
 
         leerMatrizPorFilaInverso(m);
     }
