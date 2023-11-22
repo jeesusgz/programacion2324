@@ -10,7 +10,7 @@ public class Ejercicio12 {
                 {0, 9, 8, 5, 4}
         };
 
-        imprimeMatriz(invierteMatriz(m1));
+        imprimeMatrices(m1, invierteMatriz(m1));
 
     }
 
@@ -44,11 +44,21 @@ public class Ejercicio12 {
      * Imprime por consola una matriz de enteros
      * @param matriz
      */
-    public static void imprimeMatriz(int[][] matriz) {
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++) {
-                System.out.printf("%2d ", matriz[i][j]);
+    public static void imprimeMatrices(int[][] m1, int[][] m2) {
+        for (int i = 0; i < m1.length; i++) {
+            for (int j = 0; j < m1[i].length; j++) {
+                System.out.printf("%2d ", m1[i][j]);
             }
+            /*
+             * Hemos impreso la primera matriz, daremos ahora 5 espacios
+             * y luego imprimiremos la segunda
+             */
+            System.out.print("     ");
+            for (int j = 0; j < m2[i].length; j++) {
+                System.out.printf("%2d ", m2[i][j]);
+            }
+
+            // Y luego pasaremos a la fila siguiente
             System.out.println();
         }
     }
