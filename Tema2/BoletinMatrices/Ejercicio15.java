@@ -32,6 +32,4 @@ public class Ejercicio15 {
         int coordenada = (fila * m1[0].length) + columna + 1;
         return coordenada;
     }
-
-
 }
