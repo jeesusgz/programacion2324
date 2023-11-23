@@ -19,7 +19,7 @@ public class PrincipalAlumnos {
         matrizVisible es una matriz de booleanos que nos servirá para saber si una celda está visible u oculta.
         Por defecto, todas las celdas estarán ocultas, por lo que inicializamos la matriz a false.
          */
-        ocultarTodaLaMatriz(matrizVisible);
+        //ocultarTodaLaMatriz(matrizVisible);
 
 
         /*
@@ -28,21 +28,21 @@ public class PrincipalAlumnos {
          * su valor por otra celda de la matriz obtenida aleatoriamente.
          */
 
-        fillMatrix(matriz);
-        printMatrix(matriz);
-        randomizeMatrix(matriz);
-        printMatrix(matriz);
+        //fillMatrix(matriz);
+        //printMatrix(matriz);
+        //randomizeMatrix(matriz);
+        //printMatrix(matriz);
 
         // TODO: Aplicar la lógica descrita del juego
 
 
-        if (checkFinished(matrizVisible)){
+        //if (checkFinished(matrizVisible)){
             System.out.println("¡Enhorabuena! Has ganado");
         }
-        else {
-            System.out.println("¡Vaya! Has perdido. Vuelve a jugar otra vez.");
-        }
-    }
+        //else {
+            //System.out.println("¡Vaya! Has perdido. Vuelve a jugar otra vez.");
+        //}
+    //}
 
     /**
      * Imprime la matriz por pantalla
@@ -92,8 +92,7 @@ public class PrincipalAlumnos {
      * @param matrizVisible
      * @return
      */
-    private static boolean checkFinished(boolean[][] matrizVisible) {
+    //private static boolean checkFinished(boolean[][] matrizVisible) {
 
-    }
-
+    //}
 }
