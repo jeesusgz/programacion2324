@@ -10,9 +10,6 @@ public class Principal {
             p1.enviarMensaje(p2, "Examen DB", "me quiero sucidar");
             p1.enviarMensaje(p2, "Examen DB", "me quiero sucidar");
             p1.enviarMensaje(p2, "Examen DB", "me quiero sucidar");
-            p1.enviarMensaje(p2, "Examen DB", "me quiero sucidar");
-            p1.enviarMensaje(p2, "Examen DB", "me quiero sucidar");
-            p1.enviarMensaje(p2, "Examen DB", "me quiero sucidar");
         }catch (MensajeException m){
             System.out.println(m.getMessage());
         }
