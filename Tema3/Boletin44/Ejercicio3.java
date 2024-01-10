@@ -1,8 +1,8 @@
-package Tema3.Boletin44.Ejercicio3;
+package Tema3.Boletin44;
 
 import java.util.Scanner;
 
-public class Principal {
+public class Ejercicio3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduzca una frase");
