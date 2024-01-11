@@ -20,8 +20,17 @@ public class Ejercicio5 {
 
     private static String reemplazaExpresion(String frase, String reemplazado, String reemplazador){
 
-        for (int i = frase.indexOf(reemplazado); i != -1; i += reemplazador.length()) { //TODO revisar última letra error
+        StringBuilder str = new StringBuilder(frase);
+        for (int i = 0; i != -1; i += reemplazador.length()) {
+            i = str.indexOf(reemplazado, i);
 
+            if (i != -1){
+                str.delete(i, i + reemplazado.length());
+                str.insert(i, reemplazador);
+            }else {
+                break;
+            }
         }
+        return String.valueOf(str);
     }
 }
