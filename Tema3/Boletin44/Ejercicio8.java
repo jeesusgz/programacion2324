@@ -14,6 +14,6 @@ public class Ejercicio8 {
     }
 
     public static int cuentaPalabras(String cadena){
-        return cadena.trim().split("\\s+").length;
+        return cadena.isBlank() ? 0 :cadena.trim().split("\\s+").length;
     }
 }
