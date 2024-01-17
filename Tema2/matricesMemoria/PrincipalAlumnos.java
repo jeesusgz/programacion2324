@@ -42,7 +42,7 @@ public class PrincipalAlumnos {
         int numIntentos = INTENTOS;
 
         /*
-        xCreo un bucle que dure hasta que todas las celdas estén todas true o que te quedes sin intentos
+        Creo un bucle que dure hasta que todas las celdas estén todas true o que te quedes sin intentos
          */
         while(!checkFinished(matrizVisible) && numIntentos > 0){
 
