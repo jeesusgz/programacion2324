@@ -98,8 +98,8 @@ public class Televisor {
             throw new DispositivoNoCompatibleException("El dispositivo " + dispositivo.getNombre() + " no tiene ninguna conexión compatible ");
         }
 
-        String[] protocolosTelevisor = conexiones.split(" ");
-        String[] protocolosDispositivo = dispositivo.getConexiones().split(" ");
+        String[] protocolosTelevisor = protocolos.split(" ");
+        String[] protocolosDispositivo = dispositivo.getProtocolos().split(" ");
         String protocolosUtilizada = null;
 
         for (int i = 0; i < protocolosTelevisor.length && protocolosUtilizada == null; i++) {
@@ -111,7 +111,7 @@ public class Televisor {
         }
 
         if (protocolosUtilizada == null) {
-            throw new DispositivoNoCompatibleException("El dispositivo" + dispositivo.getNombre() + "no tiene ningún protocolo compatible");
+            throw new DispositivoNoCompatibleException("El dispositivo " + dispositivo.getNombre() + " no tiene ningún protocolo compatible");
         }
 
         return String.format("Dispositivo %s conectado en el puerto HDMI usando el protocolo %s", dispositivo.getNombre(), conexionUtilizada, protocolosUtilizada);
