@@ -58,6 +58,13 @@ public class PrincipalVehiculo {
 
         seleccionUsuario = Lectora.leerEnteroDeRango("Selección: ",TipoVehiculo.values().length,1);
 
-
+        switch (seleccionUsuario){
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+        }
     }
 }
