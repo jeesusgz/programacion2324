@@ -1,7 +1,5 @@
 package Tema4.Boletin52.Ejercicio3;
 
-import Tema4.Boletin52.Ejercicio1.Gamer;
-
 public class MusicApp {
 
     public static void main(String[] args) {
