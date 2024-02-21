@@ -30,6 +30,7 @@ public class Principal {
                 System.out.println("Entero repetido");
             }
         }
+
         System.out.println();
         System.out.println("Equipo 1");
         mostrarConjuntoPersonas(equipo1.getAlumnos());
