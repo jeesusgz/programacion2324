@@ -31,4 +31,23 @@ public class Equipo {
             return null;
         }
     }
+
+    public Set<Alumno> getAlumnos() {
+        return alumnos;
+    }
+
+    public Equipo unionEquipos(Equipo equipo){
+        //equipo.nombre es el nombre del segundo equipo y nombre es el nombre del primer equipo
+        Equipo resultadoEquipos = new Equipo("Union de: " + nombre + " con " + equipo.nombre);
+        resultadoEquipos.alumnos.addAll(alumnos);
+        resultadoEquipos.alumnos.addAll(equipo.alumnos);
+        return resultadoEquipos;
+    }
+
+    public Equipo intersecionEquipos(Equipo equipo){
+        Equipo resultadoEquipos = new Equipo("Intersección de: " + nombre + " con " + equipo.nombre);
+        resultadoEquipos.alumnos.addAll(alumnos);
+        resultadoEquipos.alumnos.retainAll(equipo.alumnos);
+        return resultadoEquipos;
+    }
 }
