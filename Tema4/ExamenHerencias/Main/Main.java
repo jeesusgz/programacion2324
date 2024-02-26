@@ -85,11 +85,11 @@ public class Main {
 
         for (int j = 0; j < pokemons.length; j++) {
             // TODO: comprobar que el pokemon está vivo, que no es él mismo y que puede ser atacado
-            if (){
-                System.out.println((numPokemonVivos + 1) + ": " + pokemons[j].getNombre() + " - " + pokemons[j].getClass().getSimpleName() + " - " + pokemons[j].getPuntosSalud() + " puntos de salud");
-                numPokemonVivos++;
-                atacables.add((Atacable) pokemons[j]);
-            }
+//            if (){
+//                System.out.println((numPokemonVivos + 1) + ": " + pokemons[j].getNombre() + " - " + pokemons[j].getClass().getSimpleName() + " - " + pokemons[j].getPuntosSalud() + " puntos de salud");
+//                numPokemonVivos++;
+//                atacables.add((Atacable) pokemons[j]);
+//            }
         }
 
         int enteroIntroducido = UserDataCollector.getEnteroMinMax("Selecciona un pokemon para atacar", 1, numPokemonVivos);
@@ -123,25 +123,25 @@ public class Main {
         boolean added = false;
 
         while (!added){
-            try {
-                switch (random) {
-                    case 0:
-                        return new PokemonAgua(generaNombrePokemonAleatorio(), (int) (Math.random() * 51 + 50), (int) (Math.random() * 11 + 5), (int) (Math.random() * 21 + 5), (int) (Math.random() * 11 + 10));
-                    case 1:
-                        return new PokemonFuego(generaNombrePokemonAleatorio(), (int) (Math.random() * 51 + 50), (int) (Math.random() * 11 + 5), (int) (Math.random() * 21 + 5), (int) (Math.random() * 6 + 5));
-                    case 2:
-                        return new PokemonElectrico(generaNombrePokemonAleatorio(), (int) (Math.random() * 51 + 50), (int) (Math.random() * 11 + 5), (int) (Math.random() * 21 + 5), (int) (Math.random() * 6 + 10));
-                    case 3:
-                        return new PokemonTierra(generaNombrePokemonAleatorio(), (int) (Math.random() * 51 + 50), (int) (Math.random() * 11 + 5), (int) (Math.random() * 21 + 5), (int) (Math.random() * 9 + 1));
-                    case 4:
-                        return new PokemonDivino(generaNombrePokemonAleatorio(), (int) (Math.random() * 51 + 50), (int) (Math.random() * 11 + 5), (int) (Math.random() * 21 + 5));
-                    default:
-                        return null;
-                }
-            }
-            catch (ValorNoValidoException e) {
-                // No hacemos nada
-            }
+//            try {
+//                switch (random) {
+//                    case 0:
+//                        return new PokemonAgua(generaNombrePokemonAleatorio(), (int) (Math.random() * 51 + 50), (int) (Math.random() * 11 + 5), (int) (Math.random() * 21 + 5), (int) (Math.random() * 11 + 10));
+//                    case 1:
+//                        return new PokemonFuego(generaNombrePokemonAleatorio(), (int) (Math.random() * 51 + 50), (int) (Math.random() * 11 + 5), (int) (Math.random() * 21 + 5), (int) (Math.random() * 6 + 5));
+//                    case 2:
+//                        return new PokemonElectrico(generaNombrePokemonAleatorio(), (int) (Math.random() * 51 + 50), (int) (Math.random() * 11 + 5), (int) (Math.random() * 21 + 5), (int) (Math.random() * 6 + 10));
+//                    case 3:
+//                        return new PokemonTierra(generaNombrePokemonAleatorio(), (int) (Math.random() * 51 + 50), (int) (Math.random() * 11 + 5), (int) (Math.random() * 21 + 5), (int) (Math.random() * 9 + 1));
+//                    case 4:
+//                        return new PokemonDivino(generaNombrePokemonAleatorio(), (int) (Math.random() * 51 + 50), (int) (Math.random() * 11 + 5), (int) (Math.random() * 21 + 5));
+//                    default:
+//                        return null;
+//                }
+//            }
+//            catch (ValorNoValidoException e) {
+//                // No hacemos nada
+//            }
             added = true;
         }
 
