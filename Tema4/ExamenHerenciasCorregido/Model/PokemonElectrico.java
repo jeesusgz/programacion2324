@@ -28,7 +28,7 @@ public class PokemonElectrico extends Pokemon implements Atacable{
 
     @Override
     public void atacar(Atacable objetivo, WeatherCondition clima) throws MuerteException {
-
+        //todo terminar
     }
 
     @Override
