@@ -4,28 +4,59 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Persona {
-    private String nombre;
-    private List<Mensaje> bandejaEntrada;
+    private  String nombre;
+    private List<Mensaje> bandejaDeEntrada;
 
     public Persona(String nombre) {
         this.nombre = nombre;
-        bandejaEntrada = new ArrayList<>();
+        bandejaDeEntrada = new ArrayList<>();
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void sendMessage(Persona destinatario, String mensaje) throws MensajeException {
+    public void enviarMensaje (Persona recepetor, String mensaje) throws MensajeException {
+        recepetor.bandejaDeEntrada.add(new Mensaje(this, mensaje));
+    }
+    public String leerMensajes(){
+        StringBuilder mensajes = new StringBuilder();
+        for (int i = 0; i < bandejaDeEntrada.size(); i++){
+            mensajes.append("Mensaje : ").append(i + 1).append("\n");
+        }
+        return mensajes.toString();
+    }
+    public String leerMensajesOrdenados(){
+        List<Mensaje> bandejaOrdenada2 = new ArrayList<>(bandejaDeEntrada);
+        bandejaOrdenada2.sort(null);
 
-        destinatario.bandejaEntrada.add(new Mensaje(this, mensaje));
+        StringBuilder mensajes = new StringBuilder();
+        for (int i = 0; i < bandejaOrdenada2.size(); i++){
+            mensajes.append("Mensaje : ").append(i + 1).append(": ").append(bandejaOrdenada2.get(i).toString()).append("\n");
+        }
+        return mensajes.toString();
     }
 
-    public String leerMensaje(){
+    public void borrarMensaje(int num) throws MensajeException{
+        try{
+            bandejaDeEntrada.remove(num - 1);
+        }catch (IndexOutOfBoundsException e){
+            throw new MensajeException("No existe ese mensaje");
+        }
+    }
+
+    public String filtarMensajePorFrase(String frase) throws MensajeException{
         StringBuilder mensajes = new StringBuilder();
 
-        for (int i = 0; i < bandejaEntrada.size(); i++) {
-            mensajes.append("Mensaje ").append(i + 1).append(": ").append(bandejaEntrada.get(i)).append("\n");
+//        bandejaDeEntrada.stream().filter(m -> m.getTexto().contains(frase))
+//                .forEach(m -> mensajes.append("\n").append(m));
+
+        bandejaDeEntrada.stream().map(m -> m.toString())
+                .filter(m -> m.contains(frase))
+                .forEach(m -> mensajes.append("\n").append(m));
+
+        if (mensajes.isEmpty()){
+            throw new MensajeException("No existen mensajes con esa frase");
         }
 
         return mensajes.toString();

@@ -5,12 +5,12 @@ import java.time.format.DateTimeFormatter;
 
 public class Mensaje {
     private Persona remitente;
-    private String textoMensaje;
+    private String texto;
     private LocalDateTime fecha;
 
-    public Mensaje(Persona remitente, String textoMensaje) {
+    public Mensaje(Persona remitente, String texto) {
         this.remitente = remitente;
-        this.textoMensaje = textoMensaje;
+        this.texto = texto;
         fecha = LocalDateTime.now();
     }
 
@@ -18,8 +18,8 @@ public class Mensaje {
         return remitente;
     }
 
-    public String getTextoMensaje() {
-        return textoMensaje;
+    public String getTexto() {
+        return texto;
     }
 
     public LocalDateTime getFecha() {
@@ -28,11 +28,14 @@ public class Mensaje {
 
     @Override
     public String toString() {
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-YYYY HH:mm");
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("d");
         StringBuilder mensaje = new StringBuilder("De: ")
                 .append(remitente.getNombre())
-                .append("Texto: ").append(textoMensaje)
-                .append("Fecha y hora: ").append(fecha.format(format));
+                .append(" Texto: ").append(texto)
+                .append(" Fecha y hora").append(fecha.format(format));
         return mensaje.toString();
+    }
+    public int compareTo(Mensaje mensaje){
+        return fecha.compareTo(mensaje.fecha);
     }
 }
