@@ -22,6 +22,14 @@ public class Paciente implements Comparable<Paciente>{
         setPrioridad(prioridad);
     }
 
+    public int getEdad() {
+        return edad;
+    }
+
+    public int getPrioridad() {
+        return prioridad;
+    }
+
     public void setPrioridad(int prioridad) throws HospitalException{
         if (prioridad < MAX_PRIORIDAD || prioridad > MIN_PRIORIDAD){
             throw new HospitalException("Valor inválido");
