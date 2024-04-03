@@ -1,7 +1,6 @@
 package Tema5.Examen2021;
 
 import java.util.HashMap;
-import java.util.NoSuchElementException;
 
 public class NetPlease {
     private HashMap<String, PeliculasDeUnTema> mapPeliculas;
