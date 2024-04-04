@@ -28,8 +28,14 @@ public class Liga {
 
         equipos.add(e);
     }
-    
+
+    /**
+     * elimina a un equipo de la liga
+     * @param e el equipo a eliminar
+     * @throws LigaException si el equipo no pertenece a la liga
+     */
     public void eliminaEquipo(Equipo e) throws LigaException {
+        //utilizo remove porque devuelve true si el objeto está y lo elimina y si no devolvemos la excepción
         if (!equipos.remove(e)){
             throw new LigaException("El equipo no está inscrito");
         }
