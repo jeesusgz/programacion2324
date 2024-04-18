@@ -63,28 +63,28 @@ public class Principal {
                 int op = Integer.parseInt(sc.nextLine());
 
                 switch (op) {
-                    case 1:
-                        System.out.println("\n�Qu� cromo desea a�adir?: ");
-                        mostrarCromos();
-
-                        String nombre = sc.nextLine();
-                        Cromo c = get(nombre);
-
-                        m1.addCromo(c);
-
-                        break;
-                    case 2:
-                        System.out.println("�Cu�l de tus cromos quieres cambiar?: ");
-                        mostrarCromosDeMazo(m1);
-                        String nombreCromoParaCambiar = sc.nextLine();
-                        Cromo cromoParaCambiar = get(nombreCromoParaCambiar);
-
-                        System.out.println("�Por qu� cromo quieres cambiarlo?: ");
-                        mostrarCromosDeMazo(m2);
-                        String nombreCromoDelOtro = sc.nextLine();
-                        Cromo cromoDelOtro = get(nombreCromoDelOtro);
-
-                        m1.intercambiar(cromoParaCambiar, cromoDelOtro);
+//                    case 1:
+//                        System.out.println("\n�Qu� cromo desea a�adir?: ");
+//                        mostrarCromos();
+//
+//                        String nombre = sc.nextLine();
+//                        Cromo c = get(nombre);
+//
+//                        m1.addCromo(c);
+//
+//                        break;
+//                    case 2:
+//                        System.out.println("�Cu�l de tus cromos quieres cambiar?: ");
+//                        mostrarCromosDeMazo(m1);
+//                        String nombreCromoParaCambiar = sc.nextLine();
+//                        Cromo cromoParaCambiar = get(nombreCromoParaCambiar);
+//
+//                        System.out.println("�Por qu� cromo quieres cambiarlo?: ");
+//                        mostrarCromosDeMazo(m2);
+//                        String nombreCromoDelOtro = sc.nextLine();
+//                        Cromo cromoDelOtro = get(nombreCromoDelOtro);
+//
+//                        m1.intercambiar(cromoParaCambiar, cromoDelOtro);
 
                         /*
                          * Aqu� habr�a que "restar" ese cromo del mazo 2, pero obviaremos esto para
@@ -92,7 +92,7 @@ public class Principal {
                          */
 
 
-                        break;
+//                        break;
                     case 3:
                         System.out.println("Mezclando m1 con m2");
                         m1.mezclar(m2);
@@ -110,15 +110,15 @@ public class Principal {
                         String equipoAltura = sc.nextLine();
                         System.out.println(m1.alturaMedia(equipoAltura));
                         break;
-                    case 7:
-                        m1.getLista().stream().forEach(System.out::println);
-                        break;
-                    case 8:
-                        m1.ordenar().stream().forEach(System.out::println);
-                        break;
-                    case 9:
-                        m1.equipoCompleto().stream().forEach(System.out::println);
-                        break;
+//                    case 7:
+//                        m1.getLista().stream().forEach(System.out::println);
+//                        break;
+//                    case 8:
+//                        m1.ordenar().stream().forEach(System.out::println);
+//                        break;
+//                    case 9:
+//                        m1.equipoCompleto().stream().forEach(System.out::println);
+//                        break;
                     case 10:
                         System.out.println("Que tenga un buen d�a.");
                         fin = true;
@@ -149,13 +149,13 @@ public class Principal {
                 + "\n(10) Salir";
     }
 
-    private static void mostrarCromos() {
-        todos.stream().map(c -> c.getNombre()).forEach(System.out::println);
-    }
-
-    private static void mostrarCromosDeMazo(Mazo m) {
-        m.getLista().forEach(System.out::println);
-    }
+//    private static void mostrarCromos() {
+//        todos.stream().map(c -> c.getNombre()).forEach(System.out::println);
+//    }
+//
+//    private static void mostrarCromosDeMazo(Mazo m) {
+//        m.getLista().forEach(System.out::println);
+//    }
 
     /**
      * TODO: recorrer todos los cromos de la lista "todos" y devolver aqu�l cromo
@@ -163,7 +163,7 @@ public class Principal {
      * @param nombre el nombre del cromo buscado
      * @return El cromo correspondiente
      */
-    private static Cromo get(String nombre) {
-
-    }
+//    private static Cromo get(String nombre) {
+//
+//    }
 }

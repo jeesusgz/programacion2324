@@ -69,41 +69,41 @@ public class Tienda {
      * Devuelve un conjunto con aquellas categorías que contienen algún producto sin stock
      * @return
      */
-    public Set<Categoria> categoriasConProductosSinStock() {
-
-    }
+//    public Set<Categoria> categoriasConProductosSinStock() {
+//
+//    }
 
     /**
      * Devuelve un conjunto con las categorías a las que pertenece un producto determinado
      * @param p
      * @return
      */
-    public Set<Categoria> categoriasDeProducto(Producto p) {
-
-    }
+//    public Set<Categoria> categoriasDeProducto(Producto p) {
+//
+//    }
 
     /**
      * Devuelve un listado con todos los productos de la tienda (sin repetir) ordenados por precio de mayor a menor
      * @return
      */
-    public List<Producto> getTodosLosProductosOrdenadosPorPrecio(){
-
-    }
+//    public List<Producto> getTodosLosProductosOrdenadosPorPrecio(){
+//
+//    }
 
     /**
      * Elimina un producto de todas las categorías donde aparezca.
      * @param p
      * @return true si el producto aparecía en alguna categoría
      */
-    public boolean eliminaProducto(Producto p){
-
-    }
+//    public boolean eliminaProducto(Producto p){
+//
+//    }
 
     /**
      * Devuelve un conjunto con aquellos productos que han sido añadido en el último año (a partir de la fecha actual)
      * @return
      */
-    public Set<Producto> productosUltimoAnno(){
-
-    }
+//    public Set<Producto> productosUltimoAnno(){
+//
+//    }
 }
