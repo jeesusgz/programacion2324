@@ -63,6 +63,34 @@ public class Ejericio2 {
                 }
             }
 
+            NodeList todosLosDiv = doc.getElementsByTagName("div");
+
+            for (int i = 0; i < todosLosDiv.getLength(); i++) {
+                Element element = (Element) todosLosDiv.item(i);
+
+                if (element.getAttribute("id").equals("menu-principal")){
+                    NodeList liElement = element.getElementsByTagName("li");
+
+                    for (int j = 0; j < liElement.getLength(); j++) {
+                        System.out.println("Elemento de la lista: " + liElement.item(j).getTextContent());
+                    }
+                }
+            }
+
+            NodeList todosLosDiv2 = doc.getElementsByTagName("div");
+
+            for (int i = 0; i < todosLosDiv2.getLength(); i++) {
+                Element element = (Element) todosLosDiv2.item(i);
+
+                if (element.getAttribute("class").equals("noticia")){
+                    String titular = element.getElementsByTagName("h2").item(0).getTextContent();
+                    System.out.println("Titular: " + titular);
+
+                    String textoParrafo = element.getElementsByTagName("p").item(0).getTextContent();
+                    System.out.println("Texto del párrafo: " + textoParrafo);
+                }
+            }
+
         } catch (ParserConfigurationException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
