@@ -8,16 +8,14 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerFactory;
-import java.io.File;
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Ejercicio2 {
     public static void main(String[] args) {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+
 
         try {
             DocumentBuilder db = dbf.newDocumentBuilder();
@@ -35,25 +33,36 @@ public class Ejercicio2 {
             }
 
             NodeList capitulos = doc.getElementsByTagName("capitulo");
+            Element raiz = doc.getDocumentElement();
+
+            Pattern p = Pattern.compile("\\p{L}+");
 
             for (int i = 0; i < capitulos.getLength(); i++) {
                 Element capitulo = (Element) capitulos.item(i);
 
-                String sinopsis = capitulo.getElementsByTagName("sinopsis").item(0).getTextContent();
-                
+                Element sinopsis = (Element) capitulo.getElementsByTagName("sinopsis").item(0);
+                Matcher m = p.matcher(sinopsis.getTextContent());
+
+                if (m.results().count() <= 30){
+                    raiz.removeChild(capitulo);
+                    i--;
+                }
             }
 
-            File f = new File("./src/Tema6/Examen2023/simpsons.xml");
+            for (int i = 0; i < capitulos.getLength(); i++) {
+                Element capitulo = (Element) capitulos.item(i);
+                Element sinopsis = (Element) capitulo.getElementsByTagName("sinopsis").item(0);
 
-            Transformer transformer = TransformerFactory.newInstance().newTransformer();
-            transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+                String textoSinopsis = sinopsis.getTextContent();
+                textoSinopsis = textoSinopsis.replaceAll("(Marge|Homer|Bart|Lisa|Maggie)", "**$1**");
+                sinopsis.setTextContent(textoSinopsis);
+            }
+
         } catch (ParserConfigurationException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (SAXException e) {
-            throw new RuntimeException(e);
-        } catch (TransformerConfigurationException e) {
             throw new RuntimeException(e);
         }
     }
