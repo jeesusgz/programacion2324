@@ -23,6 +23,8 @@ public class Aeropuerto2 {
         try{
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document doc = db.parse("./src/Tema6/Examen2021/aeropuerto.xml");
+            Document newDoc = db.parse("./src/Tema6/Examen2021/aeropuerto.xml");
+
 
             NodeList vuelos = doc.getElementsByTagName("vuelo");
 
@@ -48,17 +50,29 @@ public class Aeropuerto2 {
                 }
             }
 
+            //borrar elementos de xml
+            newDoc.appendChild(newDoc.importNode(doc.getDocumentElement(), true));
+            NodeList companias = newDoc.getElementsByTagName("compania");
+
+            for (int i = 0; i < companias.getLength(); i++) {
+                companias.item(i).getParentNode().removeChild(companias.item(i));
+                i--;
+            }
+
             //crear un nuevo xml
             File f = new File("./src/Tema6/Examen2021/aeropuerto2.xml");
 
             Transformer transformers = TransformerFactory.newInstance().newTransformer();
 
+            transformers.setOutputProperty(OutputKeys.INDENT, "yes");
             transformers.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
 
             StreamResult results = new StreamResult(f);
 
             DOMSource sources = new DOMSource(doc);
             transformers.transform(sources, results);
+
+
         } catch (ParserConfigurationException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
