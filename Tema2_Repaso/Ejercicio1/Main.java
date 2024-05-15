@@ -2,6 +2,8 @@ package Tema2_Repaso.Ejercicio1;
 
 import MiEntradaSalidaLectora.Lectora;
 
+import java.util.List;
+
 public class Main {
     private static Tienda tienda = new Tienda("VVS Switch de la glopeta");
     public static void main(String[] args) {
@@ -21,5 +23,10 @@ public class Main {
         boolean disponible = Lectora.leerCaracterSN("La mascota esta disponible? (S/N): ") == 'S';
 
         tienda.addMascota(nombre, especie, edad, precio, disponible);
+    }
+
+    public static void addCompra(){
+        List<Cliente> clientes = tienda.getListaClientes();
+        Cliente c = Lectora.leerOpciones("Elige un cliente: ", clientes.stream().map());
     }
 }

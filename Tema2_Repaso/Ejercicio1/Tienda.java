@@ -16,6 +16,10 @@ public class Tienda {
         this.listaCompra = new ArrayList<>();
     }
 
+    public List<Cliente> getListaClientes() {
+        return listaClientes;
+    }
+
     public void addCliente(String nombre) {
         Cliente cliente = new Cliente(nombre);
         listaClientes.add(cliente);
@@ -24,5 +28,10 @@ public class Tienda {
     public void addMascota(String nombre, Especie especie, int edad, double precio, boolean disponible) {
         Mascota mascota = new Mascota(nombre, especie, edad, precio, disponible);
         listaMascotas.add(mascota);
+    }
+
+    public void comprarMascota(Cliente cliente, Mascota mascota){
+        Compra compra = new Compra(mascota, cliente);
+        listaCompra.add(compra);
     }
 }
