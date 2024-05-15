@@ -1,6 +1,6 @@
 package Tema2.BoletinArray1;
 
-import EntradaSalida.MiEntradaSalida;
+import MiEntradaSalidaLectora.Lectora;
 
 import java.util.Arrays;
 
@@ -15,11 +15,11 @@ public class Ejercicio13 {
 
         while (opcion != 4){
             menu();
-            opcion = MiEntradaSalida.leerEnteroDeRango("Introduce una opción", 1, 4);
+            opcion = Lectora.leerEnteroDeRango("Introduce una opción", 1, 4);
 
             switch (opcion) {
                 case 1 -> {
-                    int num = MiEntradaSalida.leerEntero("Introduce un número");
+                    int num = Lectora.leerCaracter("Introduce un número");
                     apilar(num);
                 }
                 case 2 -> {

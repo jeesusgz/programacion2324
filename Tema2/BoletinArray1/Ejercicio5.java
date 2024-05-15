@@ -1,6 +1,6 @@
 package Tema2.BoletinArray1;
 
-import EntradaSalida.MiEntradaSalida;
+import MiEntradaSalidaLectora.Lectora;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ public class Ejercicio5 {
 
     private static final int MAX_RANDOM =  1000;
     public static void main(String[] args) {
-        int tamArray = MiEntradaSalida.LeerEnteroPositivo("Introduce el tamaño del array");
+        int tamArray = Lectora.leerEnteroPositivo("Introduce el tamaño del array");
 
         int[] arrayAleatorio = generaArrayAleatorio(tamArray);
 

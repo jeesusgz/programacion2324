@@ -1,12 +1,12 @@
 package Tema2.BoletinArray1;
 
-import EntradaSalida.MiEntradaSalida;
+import MiEntradaSalidaLectora.Lectora;
 
 public class Ejercicio7 {
     private static final int MAX_RANDOM = 10;
     public static void main(String[] args) {
-        int num = MiEntradaSalida.LeerEnteroPositivo("Introduce el valor que deseas buscar");
-        int tamArray = MiEntradaSalida.LeerEnteroPositivo("Introduce el tamaño del array");
+        int num = Lectora.leerEnteroPositivo("Introduce el valor que deseas buscar");
+        int tamArray = Lectora.leerEnteroPositivo("Introduce el tamaño del array");
         int[] array = generaArrayAleatorio(tamArray);
 
         if (contieneElemento(array, num)){

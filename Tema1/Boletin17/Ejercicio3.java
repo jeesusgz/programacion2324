@@ -1,7 +1,5 @@
 package Tema1.Boletin17;
 
-import EntradaSalida.MiEntradaSalida;
-
 import java.util.Scanner;
 
 public class Ejercicio3 {

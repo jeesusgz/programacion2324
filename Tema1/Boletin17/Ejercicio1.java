@@ -1,12 +1,12 @@
 package Tema1.Boletin17;
 
-import EntradaSalida.MiEntradaSalida;
+import MiEntradaSalidaLectora.Lectora;
 
 import java.util.Scanner;
 
 public class Ejercicio1 {
     public static void main(String[] args) {
-        int num = MiEntradaSalida.LeerEnteroPositivo("Introduce un número positivo");
+        int num = Lectora.leerEnteroPositivo("Introduce un número positivo");
 
        int inverso = 0;
 

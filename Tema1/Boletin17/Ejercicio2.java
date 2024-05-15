@@ -1,11 +1,11 @@
 package Tema1.Boletin17;
 
-import EntradaSalida.MiEntradaSalida;
+import MiEntradaSalidaLectora.Lectora;
 
 public class Ejercicio2 {
     public static void main(String[] args) {
 
-        int num = MiEntradaSalida.LeerEnteroPositivo("Introduce un número positivo");
+        int num = Lectora.leerEnteroPositivo("Introduce un número positivo");
 
         int inverso = reverse(num);
 

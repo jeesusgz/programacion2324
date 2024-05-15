@@ -197,4 +197,17 @@ public class Lectora {
         return opciones[opcionElegida - 1];
     }
 
+    public static <T> T leerEnum(String mensaje, T[] opciones){
+        int opcionElegida = 0;
+
+        do {
+            for (int i = 0; i < opciones.length; i++) {
+                System.out.printf("%d = %s \n", i + 1, opciones[i]);
+            }
+            System.out.println(mensaje);
+            opcionElegida = Integer.parseInt(sc.nextLine());
+        } while (opcionElegida <= 0 || opcionElegida > opciones.length);
+
+        return opciones[opcionElegida - 1];
+    }
 }

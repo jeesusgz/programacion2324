@@ -1,6 +1,6 @@
 package Tema2.BoletinArray1;
 
-import EntradaSalida.MiEntradaSalida;
+import MiEntradaSalidaLectora.Lectora;
 
 public class Ejercicio6 {
 
@@ -8,7 +8,7 @@ public class Ejercicio6 {
     public static void main(String[] args) {
 
 
-        int elementoABuscar = MiEntradaSalida.LeerEnteroPositivo("Introduce el elemento a buscar");
+        int elementoABuscar = Lectora.leerEnteroPositivo("Introduce el elemento a buscar");
         int[] arrayAleatorio = generaArrayAleatorio(MAX_RANDOM);
 
         boolean elementoEncontrado = true;

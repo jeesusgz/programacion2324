@@ -1,12 +1,12 @@
 package Tema1.Boletin16;
 
-import EntradaSalida.MiEntradaSalida;
+import MiEntradaSalidaLectora.Lectora;
 
 public class Ejercicio8 {
     public static void main(String[] args) {
-        int a = MiEntradaSalida.leerEntero("Introduce el coeficiente A");
-        int b = MiEntradaSalida.leerEntero("Introduce el coeficiente B");
-        int c = MiEntradaSalida.leerEntero("Introduce el coeficiente C");
+        int a = Lectora.leerCaracter("Introduce el coeficiente A");
+        int b = Lectora.leerCaracter("Introduce el coeficiente B");
+        int c = Lectora.leerCaracter("Introduce el coeficiente C");
 
         int discriminante = b * b - 4 * a * c;
 
