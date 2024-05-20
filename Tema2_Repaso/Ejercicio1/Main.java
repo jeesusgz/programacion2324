@@ -7,8 +7,11 @@ import java.util.List;
 public class Main {
     private static Tienda tienda = new Tienda("VVS Switch de la glopeta");
     public static void main(String[] args) {
-        addCliente();
         addMascota();
+        addMascota();
+        addCliente();
+        addCompra();
+        devolucion();
     }
 
     public static void addCliente(){
@@ -26,7 +29,17 @@ public class Main {
     }
 
     public static void addCompra(){
+        List<Cliente> clientes =  tienda.getListaClientes();
+        List<Mascota> mascotas =  tienda.listaDeMascotasDisponibles();
+        Cliente c = MiEntradaSalidaLectora.Lectora.leerEnum("selecciona el cliente: ", clientes.toArray(Cliente[]::new));
+        Mascota m = MiEntradaSalidaLectora.Lectora.leerEnum("Seleccione a la mascota: ", mascotas.toArray(Mascota[]::new));
+        tienda.comprarMascota(c, m);
+    }
+
+    public static void devolucion(){
         List<Cliente> clientes = tienda.getListaClientes();
-        Cliente c = Lectora.leerOpciones("Elige un cliente: ", clientes.stream().map());
+        Cliente c = Lectora.leerEnum("Selecciona el cliente", clientes.toArray(Cliente[]::new));
+        List<Compra> compras = tienda.listarComprasClientes(c);
+        Compra compra = Lectora.leerEnum("Selecciona la compra", compras.toArray(Compra[]::new));
     }
 }

@@ -33,5 +33,21 @@ public class Tienda {
     public void comprarMascota(Cliente cliente, Mascota mascota){
         Compra compra = new Compra(mascota, cliente);
         listaCompra.add(compra);
+        mascota.setDisponible(false);
+    }
+
+    public List<Mascota> listaDeMascotasDisponibles(){
+        return listaMascotas.stream().filter(Mascota::isDisponible).toList();
+    }
+
+    public List<Compra> listarComprasClientes(Cliente cliente){
+        return listaCompra.stream().filter(compra -> {
+            return compra.getCliente().equals(cliente) && compra.getFechaDevolucion() == null;
+        }).toList();
+    }
+
+    public void verificarDevolucion(Compra compra){
+        compra.marcarDevolucion();
+        compra.getMascota().setDisponible(true);
     }
 }

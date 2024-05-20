@@ -15,5 +15,23 @@ public class Mascota {
         this.disponible = disponible;
     }
 
+    public boolean isDisponible(){
+        return disponible;
+    }
 
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Mascota{");
+        sb.append("nombre='").append(nombre).append('\'');
+        sb.append(", especie=").append(especie);
+        sb.append(", edad=").append(edad);
+        sb.append(", precio=").append(precio);
+        sb.append(", disponible=").append(disponible);
+        sb.append('}');
+        return sb.toString();
+    }
 }
