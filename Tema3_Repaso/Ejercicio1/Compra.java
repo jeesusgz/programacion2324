@@ -1,4 +1,4 @@
-package Tema2_Repaso.Ejercicio1;
+package Tema3_Repaso.Ejercicio1;
 
 import java.time.LocalDateTime;
 
