@@ -1,5 +1,4 @@
 package Tema6.Boletin71.Ejercicio5;
-import EntradaSalida.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
