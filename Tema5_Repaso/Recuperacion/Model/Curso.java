@@ -57,18 +57,18 @@ public class Curso {
 
     }
 
-    public Map<Alumno, Integer> getAlumnosConNumeroSuspensos() {
+//    public Map<Alumno, Integer> getAlumnosConNumeroSuspensos() {
+//
+//    }
 
-    }
-
-    public double mediaEdad() {
-
-    }
+//    public double mediaEdad() {
+//
+//    }
 
 
-    public double notaMaximaRepetidores(Materia materia) {
-
-    }
+//    public double notaMaximaRepetidores(Materia materia) {
+//
+//    }
 
     public void eliminarAlumno(Alumno alumno) {
         this.alumnos.remove(alumno);
@@ -78,7 +78,7 @@ public class Curso {
         alumno.agregarFalta(fecha);
     }
 
-    public Map<Alumno, Integer> getFaltasDeAsistenciaUltimos15Dias() {
-
-    }
+//    public Map<Alumno, Integer> getFaltasDeAsistenciaUltimos15Dias() {
+//
+//    }
 }

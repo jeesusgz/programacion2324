@@ -1,0 +1,5 @@
+#Esto es un comentario
+?C:/prueba,C:/prueba/aDirectory
+*C:/prueba,C:/prueba/aDirectory,C:/prueba/hola.txt
+#Otro comentario en medio de las líneas
+$C:/prueba|.jpg

@@ -100,16 +100,16 @@ public class Principal {
             // Imprimimos los alumnos junto al número de materias suspensas
             System.out.println("--------------------------------------------------");
             System.out.println("Alumnado y materias suspensas");
-            Map<Alumno, Integer> alumnosConSuspensos = curso.getAlumnosConNumeroSuspensos();
-            for (Alumno alumno : alumnosConSuspensos.keySet()) {
-                System.out.printf("%s%s: %d\n", alumno.getNombre(), alumno.isRepetidor() ? " (Repetidor)" : "", alumnosConSuspensos.get(alumno));
-            }
+//            Map<Alumno, Integer> alumnosConSuspensos = curso.getAlumnosConNumeroSuspensos();
+//            for (Alumno alumno : alumnosConSuspensos.keySet()) {
+//                System.out.printf("%s%s: %d\n", alumno.getNombre(), alumno.isRepetidor() ? " (Repetidor)" : "", alumnosConSuspensos.get(alumno));
+//            }
 
             System.out.println("--------------------------------------------------");
-            System.out.println("Media de edad de los alumnos: " + curso.mediaEdad());
+//            System.out.println("Media de edad de los alumnos: " + curso.mediaEdad());
 
             System.out.println("--------------------------------------------------");
-            System.out.println("Nota máxima de los alumnos repetidores en la materia Programación: " + curso.notaMaximaRepetidores(materia1));
+//            System.out.println("Nota máxima de los alumnos repetidores en la materia Programación: " + curso.notaMaximaRepetidores(materia1));
 
             // Generamos ahora las faltas de asistencia
             generateFaltasDeAsistencia(curso, alumnos, 55);
@@ -117,10 +117,10 @@ public class Principal {
             // Mostramos las faltas de los últimos 15 días
             System.out.println("--------------------------------------------------");
             System.out.println("Faltas de asistencia de los últimos 15 días");
-            Map<Alumno, Integer> faltasDeAsistencia = curso.getFaltasDeAsistenciaUltimos15Dias();
-            for (Alumno alumno : faltasDeAsistencia.keySet()) {
-                System.out.printf("%s: %d\n", alumno.getNombre(), faltasDeAsistencia.get(alumno));
-            }
+//            Map<Alumno, Integer> faltasDeAsistencia = curso.getFaltasDeAsistenciaUltimos15Dias();
+//            for (Alumno alumno : faltasDeAsistencia.keySet()) {
+//                System.out.printf("%s: %d\n", alumno.getNombre(), faltasDeAsistencia.get(alumno));
+//            }
 
 
         } catch (CursoException e) {
